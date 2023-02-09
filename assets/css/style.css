@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url('../fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf');
+}
+
+:root {
+    --cyan-color: hsl(158, 36%, 37%);
+    --dark-cyan-color: hsl(158, 36%, 17%);
+    --cream-color: hsl(30, 38%, 92%);
+    --very-darkblue: hsl(212, 21%, 14%);
+    --dark-grayishblue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--cream-color);
+}
+
+
+h1 {
+    font-family: 'Fraunces';
+    font-size: 2rem;
+    margin-bottom: 30px;
+    line-height: 1;
+    color: var(--very-darkblue);
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Montserrat';
+    color: var(--dark-grayishblue);
+    line-height: 1.75;
+    letter-spacing: 1px;
+}
+
+
+.card {
+    max-width: 600px;
+    margin: 170px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: rgba(0, 0, 0, .3)0 0 3px;
+
+
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-text {
+    background-color: var(--white);
+    padding: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.category {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    letter-spacing: 4px;
+    margin-bottom: 1.25rem;
+    font-size: 12px;
+
+}
+
+.card-price {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-size: 2rem;
+    font-family: 'Fraunces';
+    letter-spacing: 0;
+    font-weight: 700;
+    color: var(--cyan-color);
+    margin-right: 1.25rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+button {
+    appearance: none;
+    border: none;
+    background-color: var(--cyan-color);
+    color: var(--white);
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: var(--dark-cyan-color);
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-family: 'Fraunces';
+        font-size: 2rem;
+        margin-bottom: 30px;
+        line-height: 1;
+        color: var(--very-darkblue);
+    }
+
+    .card {
+        max-width: 600px;
+        margin: 100px auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        border-radius: 10px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        box-shadow: rgba(0, 0, 0, .3)0 0 3px;
+    }
+
+    .card-image picture,
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1/1;
+        display: block;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .card-text {
+        background-color: var(--white);
+        padding: 25px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+}
